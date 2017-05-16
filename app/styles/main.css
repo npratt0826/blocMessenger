@@ -1,0 +1,40 @@
+*, *::before, *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-size: 100%
+}
+
+body {
+  background-color: grey;
+  font-family: sans-serif;
+  min-height: 100%;
+  padding-bottom: 200px
+}
+
+.hero-title {
+  position: relative;
+}
+
+.sidebar {
+  top: 0px;
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  background-color: lightgrey;
+  z-index: 1;
+
+}
+
+.messages {
+  top: 0px
+  position: fixed;
+  left: 250px;
+  width: 75%;
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+}
