@@ -1,5 +1,6 @@
 (function() {
     function HomeCtrl() {
+      this.heroTitle = "Bloc Messenger";
     }
 
     angular
