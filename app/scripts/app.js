@@ -12,10 +12,10 @@
                 controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
             });
-            
+
     }
 
     angular
-        .module('blocMessenger', ['ui.router', 'firebase'])
+        .module('blocMessenger', ['ui.router', 'firebase', 'ui.bootstrap'])
         .config(config);
 })();
