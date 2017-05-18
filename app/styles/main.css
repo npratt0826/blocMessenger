@@ -9,15 +9,19 @@ body {
     background-color: white;
 }
 
+div {
+  display: block;
+}
+
 /*Sidebar*/
 
 .sidebar {
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     width: 20%;
     height: 100%;
-    background-color: lightgray;
+    background-color: #80b3ff;
     z-index: 1;
 }
 
@@ -51,13 +55,13 @@ body {
 /*Messages*/
 
 .messages {
-    position: fixed;
+    position: absolute;
     top: 0px;
-    left: 300px;
+    left: 250px;
     width: 80%;
     height: 100%;
-    background-color: white;
-    z-index: 1;
+    background-color: #c2d6d6;
+    z-index: 0;
     overflow: scroll;
 }
 
@@ -94,3 +98,23 @@ body {
 .message-box {
     width: 800px;
 }
+
+.modal-container {
+  background-color: Grey;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  padding: 10px;
+  top:5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  margin: auto;
+  z-index: 1
+}
+
+.modal-container .modal-title {
+}
+
+.modal-container .mo

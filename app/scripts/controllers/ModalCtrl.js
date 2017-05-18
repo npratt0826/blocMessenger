@@ -9,6 +9,7 @@
       modal.createRoom = function () {
         Room.add(modal.newRoom);
         $uibModalInstance.close();
+        console.log(Room, "room array")
       };
 
 
