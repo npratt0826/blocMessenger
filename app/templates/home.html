@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar container">
   <div class="sidebar-header">
     <h1>
       <span ui-sref="home"> Bloc Chat </span>
@@ -6,16 +6,22 @@
     <button type='button' class="new-room" ng-click="home.addRoom()" > Create New Room</button>
   </div>
   <div class="sidebar-body" ng-repeat="room in home.rooms">
-    <p class="room-name"> {{ room.$value }} </p>
+    <p class="room-name" ng-click="home.setCurrentRoom(room)"> {{ room.$value }} </p>
   </div>
 </div>
-<div class="messages">
-  <div class='messages-header'>
-    <h3> Current Room </h3>
+<div class="messages container">
+  <div class='messages-header' >
+    <h3> {{ home.currentRoom.$value }} </h3>
   </div>
-<div class="message-body">
+<div class="message-body" ng-repeat="message in home.messages">
+  <div class="username">{{ message.username }} </div>
+  <div class="message">{{ message.all }} </div>
+  <div class=""> </div>
 
 </div>
   <div class="message-field">
+    <input type="text" name="input" class="message-box">
+    <button class="btn-new-message" type="button"> Send </button>
   </div>
+
 </div>

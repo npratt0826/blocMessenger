@@ -9,7 +9,7 @@ body {
     background-color: white;
 }
 
-div {
+.container {
   display: block;
 }
 
@@ -55,14 +55,14 @@ div {
 /*Messages*/
 
 .messages {
-    position: absolute;
+    position: relative;
     top: 0px;
-    left: 250px;
     width: 80%;
     height: 100%;
     background-color: #c2d6d6;
     z-index: 0;
     overflow: scroll;
+    float: right;
 }
 
 
@@ -98,23 +98,3 @@ div {
 .message-box {
     width: 800px;
 }
-
-.modal-container {
-  background-color: Grey;
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  padding: 10px;
-  top:5px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 10px;
-  margin: auto;
-  z-index: 1
-}
-
-.modal-container .modal-title {
-}
-
-.modal-container .mo

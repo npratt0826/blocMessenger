@@ -1,9 +1,11 @@
 (function() {
-    function HomeCtrl(Room, $uibModal) {
-      this.heroTitle = "Bloc Messenger";
+    function HomeCtrl(Room, Message, $uibModal) {
+      // home.heroTitle = "Bloc Messenger";
 
       var home = this;
-      home.rooms = Room.all
+      home.rooms = Room.all;
+      home.currentRoom = null;
+
 
       home.addRoom = function() {
         $uibModal.open({
@@ -13,6 +15,11 @@
         });
       }
 
+      home.setCurrentRoom = function(room){
+        home.currentRoom = room;
+        home.messages = Message.getByRoomId(home.currentRoom.$id);
+
+      };
 
 
 
@@ -20,5 +27,5 @@
 
     angular
         .module('blocMessenger')
-        .controller('HomeCtrl', ['Room', '$uibModal', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', '$uibModal', HomeCtrl]);
 })();
