@@ -8,9 +8,8 @@ html {
 body {
     background-color: white;
 }
-
 .container {
-  display: block;
+  display: inline-block;
 }
 
 /*Sidebar*/
@@ -21,8 +20,8 @@ body {
     left: 0px;
     width: 20%;
     height: 100%;
-    background-color: #80b3ff;
-    z-index: 1;
+    background-color: #4d94ff;
+    z-index: .5;
 }
 
 .sidebar-header {
@@ -55,14 +54,15 @@ body {
 /*Messages*/
 
 .messages {
-    position: relative;
+    position: fixed;
     top: 0px;
+    left: 300px;
     width: 80%;
     height: 100%;
-    background-color: #c2d6d6;
-    z-index: 0;
+    background-color: #cce6ff;
+    z-index: .5;
     overflow: scroll;
-    float: right;
+    box-shadow: 5px black;
 }
 
 
@@ -97,4 +97,18 @@ body {
 
 .message-box {
     width: 800px;
+}
+
+.modal-container {
+  position: fixed;
+  padding: 8px;
+  top: 300px;
+  left: 500px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+  margin: auto;
+  z-index: 1;
+  border-radius: 6px;
+
 }
