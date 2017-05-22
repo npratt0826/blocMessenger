@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl(Room, Message, $uibModal) {
+    function HomeCtrl(Room, Message, $uibModal, $cookies) {
       // home.heroTitle = "Bloc Messenger";
 
       var home = this;
@@ -27,5 +27,5 @@
 
     angular
         .module('blocMessenger')
-        .controller('HomeCtrl', ['Room', 'Message', '$uibModal', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', '$uibModal','$cookies', HomeCtrl]);
 })();

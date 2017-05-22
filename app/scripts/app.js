@@ -16,6 +16,6 @@
     }
 
     angular
-        .module('blocMessenger', ['ui.router', 'firebase', 'ui.bootstrap'])
+        .module('blocMessenger', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
         .config(config);
 })();

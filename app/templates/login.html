@@ -7,8 +7,7 @@
       <input type="text" name="input" ng-model="modal.username" required>
   </div>
   <div class="modal-footer">
-    <button class="btn-new" type="button" ng-click=""> Create username </button>
+    <button class="btn-new" type="button" ng-click="modal.createUsername()" ng-disabled="modal.username == null"> Create username </button>
   </div>
-  <div>
-  </div>
+  
 </section>

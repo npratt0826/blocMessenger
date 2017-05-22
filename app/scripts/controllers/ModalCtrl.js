@@ -1,5 +1,5 @@
 (function() {
-    function ModalCtrl(Room, $uibModalInstance) {
+    function ModalCtrl(Room, $uibModalInstance, $cookies) {
       var modal = this;
 
       modal.cancel = function(){
@@ -12,12 +12,15 @@
         console.log(Room, "room array")
       };
 
-
+      modal.createUsername = function (){
+        $cookies.put('blocMessengerCurrentUser', modal.username);
+        $uibModalInstance.close();
+      };
 
 
     }
 
     angular
         .module('blocMessenger')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
+        .controller('ModalCtrl', ['Room', '$uibModalInstance','$cookies', ModalCtrl]);
 })();
