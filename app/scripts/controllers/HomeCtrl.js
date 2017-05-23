@@ -25,6 +25,7 @@
         home.newMessage.roomId = home.currentRoom.$id;
         home.newMessage.username = home.currentUser;
         Message.send(home.newMessage);
+        home.newMessage.content = null;
       };
 
 

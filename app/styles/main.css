@@ -125,6 +125,24 @@ body {
 
 .message-box {
     width: 800px;
+    height: 40px;
+    margin: 15px;
+}
+
+.btn-new-message {
+  width: 60px;
+  height 40px;
+  padding: 10px;
+  border-radius: 3px;
+  font-family: sans-serif;
+}
+
+.btn-new-message:hover {
+  width: 62px;
+  height: 42px;
+  box-shadow: 1px 1px 1px 1px;
+
+
 }
 
 .modal-container {
