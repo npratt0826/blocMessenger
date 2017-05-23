@@ -15,7 +15,7 @@
       modal.createUsername = function (){
         $cookies.put('blocMessengerCurrentUser', modal.username);
         $uibModalInstance.close();
-      };
+      }
 
 
     }
