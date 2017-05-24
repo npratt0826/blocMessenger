@@ -8,7 +8,13 @@
   </div>
   <div class="sidebar-body" ng-repeat="room in home.rooms">
     <p class="room-name" ng-click="home.setCurrentRoom(room)"> {{ room.$value }} </p>
+    <!-- <div class="login">
+      <button class="btn-login" name="input" ng-click=""> Login </button>
+      <button class="btn-signup" name="input" ng-click=""> Sign up </button>
+      <button class="btn-logout" name="input" ng-click=""> Logout </button>
+    </div> -->
   </div>
+
 </div>
 <div class="messages container">
   <div class='messages-header' >
@@ -22,7 +28,7 @@
 </div>
   <div class="message-field">
     <input type="text" name="input" placeholder="Type here" class="message-box" ng-model="home.newMessage.content">
-    <button class="btn-new-message" type="button" ng-click="home.sendMessage()"> Send </button>
+    <button class="btn-new-message" type="button" ng-click="home.sendMessage()" > Send </button>
   </div>
 
 </div>
