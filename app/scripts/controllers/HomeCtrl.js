@@ -1,11 +1,10 @@
 (function() {
-    function HomeCtrl(Room, Message, $uibModal, $cookies) {
+    function HomeCtrl(Room, Message, $uibModal, $cookies, Auth) {
 
       var home = this;
       home.rooms = Room.all;
       home.currentRoom = null;
       home.currentUser = $cookies.get('blocMessengerCurrentUser');
-
 
       home.addRoom = function() {
         $uibModal.open({
@@ -14,6 +13,23 @@
           controller: 'ModalCtrl as modal'
         });
       };
+
+      home.login = function() {
+        $uibModal.open({
+          templateUrl: '/templates/signin.html',
+          size: 'sm',
+          controller: 'ModalCtrl as modal'
+        });
+      };
+
+      home.signOut = function () {
+        Auth.signOut(home.currentUser);
+        home.currentUser = null;
+        console.log("you are signed out");
+
+      }
+
+
 
       home.setCurrentRoom = function(room){
         home.currentRoom = room;
@@ -33,5 +49,5 @@
 
     angular
         .module('blocMessenger')
-        .controller('HomeCtrl', ['Room', 'Message', '$uibModal','$cookies', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', '$uibModal','$cookies', 'Auth', HomeCtrl]);
 })();

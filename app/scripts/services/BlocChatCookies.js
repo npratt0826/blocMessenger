@@ -3,7 +3,7 @@
     var currentUser = $cookies.get('blocMessengerCurrentUser');
     if (!currentUser || currentUser === '') {
       $uibModal.open ({
-        templateUrl: '/templates/login.html',
+        templateUrl: '/templates/signin.html',
         size: 'sm',
         controller: 'ModalCtrl as modal',
 

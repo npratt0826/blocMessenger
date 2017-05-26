@@ -8,12 +8,15 @@
   </div>
   <div class="sidebar-body" ng-repeat="room in home.rooms">
     <p class="room-name" ng-click="home.setCurrentRoom(room)"> {{ room.$value }} </p>
-    <!-- <div class="login">
-      <button class="btn-login" name="input" ng-click=""> Login </button>
-      <button class="btn-signup" name="input" ng-click=""> Sign up </button>
-      <button class="btn-logout" name="input" ng-click=""> Logout </button>
-    </div> -->
+
   </div>
+  <div class="login">
+    <button class="btn-login" ng-click="home.login()"> Login </button>
+    <button class="btn-signup" ng-click="home.login()"> Sign up </button>
+    <button class="btn-logout" ng-click="home.signOut(modal.email)"> Logout </button>
+  </div>
+  <br></br>
+  <div> {{ home.currentUser }}</div>
 
 </div>
 <div class="messages container">
