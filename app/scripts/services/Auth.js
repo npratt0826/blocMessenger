@@ -5,6 +5,7 @@
       var user = firebase.auth().currentUser;
 
       Auth.authObj = $firebaseAuth();
+      console.log(Auth.authObj);
 
 
       Auth.createUser = function(email, password) {
@@ -14,8 +15,13 @@
         var errorCode = error.code;
         var errorMessage = error.message;
         // ...
+      }).then(function(){
+        firebase.auth().signInWithEmailAndPassword(email, password);
+        // console.log(promiseObj.password,'promise password')
+        // console.log(promiseObj.email,'email');
+        // Auth.signIn(modal.email
+        // console.log(promiseObj.email,'email');, modal.password);
       });
-      firebase.auth().signInWithEmailAndPassword(email, password)
     }
 
       Auth.signIn = function(email, password) {

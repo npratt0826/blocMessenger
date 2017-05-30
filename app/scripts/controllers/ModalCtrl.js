@@ -17,10 +17,9 @@
       // };
 
       modal.createUser = function () {
+        console.log("create user works 1st")
         Auth.createUser(modal.email, modal.password);
         $cookies.put('blocMessengerCurrentUser', modal.email);
-        $uibModalInstance.close();
-        console.log("create user works")
         $uibModalInstance.close();
       };
 
@@ -29,15 +28,15 @@
         $cookies.put('blocMessengerCurrentUser', modal.email);
         $uibModalInstance.close();
         console.log(modal.email, "sign in email")
-
-
-      };
-
-      modal.signOut = function () {
-        Auth.signOut();
-        alert("you are signed out");
+        alert("Hi " + modal.username + ", you are logged in");
 
       };
+
+      // modal.signOut = function () {
+      //   Auth.signOut();
+      //   alert("you are signed out");
+      //
+      // };
 
 
     }
