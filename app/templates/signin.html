@@ -1,22 +1,27 @@
 <section class="modal-container">
   <div class="modal-header">
-      <h3 class="modal-title"> Sign Up </h3>
+      <h3 class="modal-title"> Sign In/Register </h3>
   </div>
   <div class="modal-body">
     <form class="signin">
+
       <div class="container">
-        <label><b>Email</b></label>
-        <input type="email" placeholder="Enter Email" ng-model ="modal.email" required>
+        <div class="username">
+          <input type="text" name="input" placeholder="Username..." ng-model="modal.username" required>
+        </div>
+        <div>
+          <label><b></b></label>
+          <input type="email" placeholder="Enter Email..." ng-model ="modal.email" required>
+        </div>
+        <div>
+          <label><b></b></label>
+          <input type="password" placeholder="Enter Password..." ng-model="modal.password" required>
+        </div>
 
-        <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" ng-model="modal.password" required>
-        <h5 class="modal-prompt"> Enter a username </h5>
-          <input type="text" name="input" ng-model="modal.username" required>
-
-        <div class="clearfix">
-          <button type="button" class="login" ng-click="modal.signIn()">Login</button>
-          <button type="button" class="createUser" ng-click="modal.createUser()">Sign Up</button>
-          <button type="button" class=cancelLogin ng-click="modal.cancel()">cancel</button>
+        <div class="buttons clearfix">
+          <button type="button" class="btn login" ng-click="modal.signIn()">Login</button>
+          <button type="button" class="btn createUser" ng-click="modal.createUser()">Sign Up</button>
+          <button type="button" class="btn cancelLogin" ng-click="modal.cancel()">cancel</button>
         </div>
       </div>
     </form>

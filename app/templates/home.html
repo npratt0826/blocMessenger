@@ -1,37 +1,44 @@
-<div class="sidebar container">
-  <div class="sidebar-header">
-    <h1>
-      <span> Bloc Chat </span>
-      <button type='button' class="new-room" ng-click="home.addRoom()">New Room</button>
-    </h1>
-    <!-- <button type='button' class="new-room" ng-click="home.addRoom()">New Room</button> -->
-  </div>
-  <div class="sidebar-body" ng-repeat="room in home.rooms">
-    <p class="room-name" ng-click="home.setCurrentRoom(room)"> {{ room.$value }} </p>
+<div class="main">
+  <div class="sidebar container">
+    <div class="sidebar-header">
+      <h1>
+        <span> Bloc Chat </span>
+        <button type='button' class="new-room" ng-click="home.addRoom()">New Room</button>
+      </h1>
+      <!-- <button type='button' class="new-room" ng-click="home.addRoom()">New Room</button> -->
+    </div>
+    <div class="login">
+      <button class="btn btn-login" ng-click="home.login()"> Login </button>
+      <button class="btn btn-signup" ng-click="home.login()"> Sign up </button>
+      <button class="btn btn-logout" ng-click="home.signOut(modal.email)"> Logout </button>
+    </div>
+    <div class="sidebar-body" ng-repeat="room in home.rooms">
+      <p class="room-name" ng-click="home.setCurrentRoom(room)"> {{ room.$value }} </p>
+
+    </div>
+
+    <br></br>
+    <div> {{ home.currentUser }}</div>
 
   </div>
-  <div class="login">
-    <button class="btn-login" ng-click="home.login()"> Login </button>
-    <button class="btn-signup" ng-click="home.login()"> Sign up </button>
-    <button class="btn-logout" ng-click="home.signOut(modal.email)"> Logout </button>
-  </div>
-  <br></br>
-  <div> {{ home.currentUser }}</div>
-
-</div>
-<div class="messages container">
   <div class='messages-header' >
-    <h3> {{ home.currentRoom.$value }} </h3>
+    <h3 class="room"> {{ home.currentRoom.$value }} </h3>
   </div>
-<div class="messages-body" ng-repeat="message in home.messages">
-  <div class="username">{{ message.username }} : </div>
-  <div class="timestamp">{{ message.sentAt | date: "shortTime" }}</div>
-  <div class="user-message">{{ message.content }} </div>
+  <div class="messages container">
+  <div class="messages-body" ng-repeat="message in home.messages">
+    <div class="username">{{ message.username }} : </div>
+    <div class="timestamp">{{ message.sentAt | date: "shortTime" }}</div>
+    <div class="user-message">{{ message.content }} </div>
 
-</div>
+  </div>
+    <div class="message-field">
+      <input type="text" name="input" placeholder="Type here" class="message-box" ng-model="home.newMessage.content">
+      <button class="btn-new-message" type="button" ng-click="home.sendMessage()" > Send </button>
+    </div>
+
+  </div>
   <div class="message-field">
     <input type="text" name="input" placeholder="Type here" class="message-box" ng-model="home.newMessage.content">
     <button class="btn-new-message" type="button" ng-click="home.sendMessage()" > Send </button>
   </div>
-
 </div>

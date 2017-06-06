@@ -6,38 +6,69 @@ html {
 }
 
 body {
-    background-color: white;
+    background-color: black;
 }
 .container {
   display: inline-block;
 }
 
+.btn {
+  padding: 5px;
+  border: none;
+  font-family: sans-serif;
+  border-radius: 3px;
+}
+
 /*Sidebar*/
 
 .sidebar {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 400px;
-    height: 100%;
-    background-color: #4d94ff;
+    float: left;
+    width: 25%;
+    height: 50rem;
+    background-color: black;
     z-index: .5;
+    border: solid;
+    border-color: #ff8000;
 }
 
 .sidebar-header {
-    padding-left: 10px;
-    margin-bottom: 5px;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
     display: table;
-    width: 100%;
     box-sizing: border-box;
+    color: #ff8000;
 }
 
 .sidebar-header .new-room {
     margin: 0 40px;
-    padding: 5px;
+    padding: .5rem;
     border: none;
     font-family: sans-serif;
     border-radius: 3px;
+}
+
+.sidebar .login {
+  margin: 0 5rem;
+  padding: 5px;
+  border: none;
+  font-family: sans-serif;
+  border-radius: 3px;
+  margin-bottom: 30px;
+
+}
+
+.sidebar .btn-signup:hover {
+  cursor: pointer;
+
+}
+.sidebar .btn-login:hover {
+  cursor: pointer;
+
+}
+.sidebar .btn-logout:hover {
+  cursor: pointer;
+
+}
 }
 
 .sidebar-header .new-room:hover {
@@ -57,14 +88,13 @@ body {
 .sidebar .room-name {
     background-color: lightgrey;
     font-family: sans-serif;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: 30px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    padding: .5rem;
+    margin-left: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     border-radius: 10px;
     text-align: center;
-    width: 250px;
+    width: 5rem;
 }
 
 
@@ -72,21 +102,29 @@ body {
 /*Messages*/
 
 .messages {
-    position: fixed;
+    float: right;
     top: 0px;
-    left: 400px;
-    bottom: 500px;
-    width: 80%;
-    height: 90%;
-    background-color: #cce6ff;
+    width: 74%;
+    height: 40rem;
+    background-color: grey;
     z-index: .5;
     overflow: scroll;
+    border: solid;
+    border-color: white;
 }
 
 .messages-header {
   font-family: sans-serif;
-  margin-left: 10px;
+  color: #ff8000;
+  background-color: black;
+  padding: 1px;
+  border: solid;
 }
+
+.messages-header .room {
+  margin-left: 20rem;
+}
+
 
 
 .messages-body {
@@ -121,12 +159,12 @@ body {
 .message-field {
     bottom: 0;
     padding-bottom: 5px;
-    position: fixed;
+    float: left;
 }
 
 .message-box {
-    width: 800px;
-    height: 40px;
+    width: 30rem;
+    height: 3rem;
     margin: 15px;
 }
 
@@ -148,14 +186,80 @@ body {
 
 .modal-container {
   position: fixed;
+  border: 10px;
+  border-style: solid;
+  border-color: #ff8000;
   padding: 8px;
-  top: 300px;
+  top: 200px;
   left: 500px;
   width: 500px;
-  height: 500px;
-  background-color: grey;
+  height: 300px;
+  background-color: white;
   margin: auto;
   z-index: 1;
   border-radius: 6px;
+}
 
+.modal-body{
+  padding: 20px;
+  marging: 20px;
+}
+
+.modal-body .container {
+  clear: both;
+  text-align: center;
+
+}
+.modal-title {
+  text-align: center;
+}
+
+.modal-body .buttons {
+  margin: 20px;
+  width: auto;
+  padding-left: 10px;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+    body    {
+        padding-left: 50px;
+        padding-right: 50px;
+        color: green;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 1199px) {
+    body    {
+        padding-left: 30px;
+        padding-right: 30px;
+        color: purple;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    body    {
+        padding-left: 20px;
+        padding-right: 20px;
+        color: blue;
+
+    }
+    .sidebar {
+      width: 20%;
+
+    }
+    .messages {
+      width: 20%;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    body    {
+        padding-left: 5px;
+        padding-right: 5px;
+        color: red;
+    }
 }
